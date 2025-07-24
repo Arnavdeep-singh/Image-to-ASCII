@@ -43,9 +43,24 @@ def getGrayscaleVal(processedImage):
         raise("file type incompatible")
     return brightnessMap
 
-# print(getGrayscaleVal(processed))
+def makeAscii(map):
+    ascii = ""
+    for n in map:
+        if (len(ascii) % 256 == 0):
+            ascii = ascii + "\n"
+        ascii = ascii + CHAR[int(round((n/4)))]
+    return ascii
+
+
+with open("demofile.txt", "a") as f:
+  f.write(makeAscii(getGrayscaleVal(processed)))
+
+#open and read the file after the appending:
+with open("demofile.txt") as f:
+    print(f.read()) 
+
+# print(makeAscii(getGrayscaleVal(processed)))
 
 # display image
 # processed.show()
 
-print(len(CHAR))
