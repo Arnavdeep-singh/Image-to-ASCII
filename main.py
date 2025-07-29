@@ -1,7 +1,7 @@
 from PIL import Image
 
 # open image
-img_url = "/home/arnavdeeps/Desktop/sat.jpg"
+img_url = "/home/arnavdeeps/Desktop/statue.jpg"
 
 
 # open image
@@ -14,7 +14,7 @@ aspect_ratio = og_width/og_height
 width = 256
 height = int(width * aspect_ratio * THIRD) 
 
-CHAR = "$@B%8&WM#oahkbdpqwmZO0QLCJUYXzcvunxjft/\\|()1{}[]?i!lI*^+~;:,-_`'.- " # [::-1] # reverse this list for brightness inversion
+CHAR = "$@B%8&WM#oahkbdpqwmZO0QLCJUYXzcvunxjft/\\|()1{}[]?i!lI*^+~;:,-_`'.- " [::-1] # reverse this list for brightness inversion
 # CHAR = "@$B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. "
 def processImage(image):
 
