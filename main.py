@@ -1,7 +1,8 @@
 from PIL import Image
+import sys
 
 # open image
-img_url = "/home/arnavdeeps/Desktop/statue.jpg"
+img_url = sys.argv[1]
 
 
 # open image
